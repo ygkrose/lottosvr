@@ -1,0 +1,95 @@
+﻿<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+    <style>
+        .kuang {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+        #mess {
+            text-align: center;
+        }
+
+        .value {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 200px;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="mess">正在連接...</div>
+
+    <div class="kuang">
+
+        <div class="value">小明小明</div>
+
+        <div class="value">大胸大胸</div>
+
+        <div class="value">小張小張</div>
+
+    </div>
+
+    <script>
+
+        var mess = document.getElementById("mess");
+
+        if (window.WebSocket) {
+
+            var ws = new WebSocket('ws://192.168.6.111:8001');
+
+            ws.onopen = function (e) {
+
+                console.log("連接伺服器成功");
+
+                ws.send("game1");
+
+            }
+
+            ws.onclose = function (e) {
+
+                console.log("伺服器關閉");
+
+            }
+
+            ws.onerror = function () {
+
+                console.log("連接出錯");
+
+            }
+
+            ws.onmessage = function (e) {
+
+                mess.innerHTML = "連接成功"
+
+                document.querySelector(".kuang").onclick = function (e) {
+
+                    var time = new Date();
+
+                    ws.send(time + " game1點擊了「" + e.target.innerHTML + "」");
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
