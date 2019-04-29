@@ -5,7 +5,7 @@ var pg = require('pg');
 //var uri = 'postgres://postgres:whale@localhost/lotto';
 //var uri = 'postgres://adminzplezuj:JFI9KTIvIGKb@localhost/jigang';
 
-var uri = 'postgres://postgres:whale@localhost/lotto';
+var uri = 'postgres://sa:whale@localhost:15432/lottodb';
 //var uri = 'postgresql://adminzplezuj:JFI9KTIvIGKb@127.2.216.2:5432/jigang';
 
 
