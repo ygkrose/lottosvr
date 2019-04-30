@@ -2,7 +2,7 @@ var http = require('http') ,
 	//sys = require('sys'),
    crawler = require('./crawler');
 
- var port = process.env.OPENSHIFT_NODEJS_PORT || 6868  
+ var port = process.env.OPENSHIFT_NODEJS_PORT || 8080  
 , ip = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 
   var server = http.createServer(function (request, response) {
