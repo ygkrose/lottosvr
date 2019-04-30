@@ -1,5 +1,5 @@
 var http = require('http') ,
-	sys = require('sys'),
+	//sys = require('sys'),
    crawler = require('./crawler');
 
  var port = process.env.OPENSHIFT_NODEJS_PORT || 5858  
