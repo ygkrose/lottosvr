@@ -170,4 +170,4 @@ var launch = function (){
 		});
 	});
 };
-new launch();
+//new launch();
