@@ -45,5 +45,7 @@ var http = require('http') ,
       } 
 	  
   }).listen(port,ip);
-sys.puts( "Listening on " + ip + ", server_port " + port );
-  sys.puts('server running at port:5858');
+//sys.puts( "Listening on " + ip + ", server_port " + port );
+  //sys.puts('server running at port:5858');
+  console.log( "Listening on " + ip + ", server_port " + port );
+  console.log('server running at port:5858')
